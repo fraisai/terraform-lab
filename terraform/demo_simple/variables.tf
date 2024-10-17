@@ -13,3 +13,5 @@ variable "ami" {
   description = "Region Specific Amazon Machine Image"
   default     = "ami-0c8cbc55eb5f3c5cc"
 }
+
+
