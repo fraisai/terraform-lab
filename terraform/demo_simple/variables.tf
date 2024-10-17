@@ -1,6 +1,6 @@
 
 variable "region" {
-  description = "Default region for my manifest"
+  description = "Region for my manifest. The AMI is tied to this region"
   default     = "us-west-1"
 }
 
