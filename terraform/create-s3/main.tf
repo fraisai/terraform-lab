@@ -1,10 +1,10 @@
 resource "aws_s3_bucket" "fariha-bucket" {
-    bucket              = "my-bucket-fariha"
+  bucket = "my-bucket-fariha"
 
-    tags = {
-        Name            = "fariha"
-        Environment     = "dev"
-    }
+  tags = {
+    Name        = "fariha"
+    Environment = "dev"
+  }
 }
 
 
