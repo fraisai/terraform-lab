@@ -4,6 +4,21 @@ variable "region" {
   type        = string
 }
 
+variable "domain" {
+  type    = string
+  default = "ajmusgrove.net"
+}
+
+variable "alarm_email" {
+  type    = string
+  default = "ajmusgrove@ajmusgrove.com"
+}
+
+variable "route53_zone_id" {
+  type    = string
+  default = "Z0180874I88FNAEZV6FY"
+}
+
 variable "service_port" {
   type    = number
   default = "8080"
@@ -29,3 +44,7 @@ variable "instance_type" {
   default = "t4g.nano"
 }
 
+variable "guardduty_name" {
+  type    = string
+  default = "guardduty"
+}
