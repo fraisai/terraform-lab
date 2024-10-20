@@ -1,0 +1,28 @@
+---
+- name: Deploy Bookshop Inventory
+  hosts: inventory
+  gather_facts: true
+  remote_user: ubuntu
+
+  tasks:
+  - name: Print Remote OS
+    debug:
+      msg: "family is {{ ansible_facts['os_family'] }}"
+
+  ##################################################
+  # Play 1 - Install Pre-Req Packages
+  #    Packages: unzip, python3-boto3, python3-flask
+  ##################################################
+
+  ##################################################
+  # Play 2 - Install Inventory Server
+  ##################################################
+
+  ##################################################
+  # Play 3 - Install System Service
+  ##################################################
+
+  ##################################################
+  # Play 4 - Start Inventory Server
+  #     Enable to start on reboot
+  ##################################################
