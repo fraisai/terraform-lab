@@ -8,3 +8,4 @@ inventory.ini
 inventory.zip
 ec2user.pem
 ec2user.pub
+.DS_Store
