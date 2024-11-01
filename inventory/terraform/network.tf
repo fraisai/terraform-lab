@@ -90,9 +90,9 @@ resource "aws_route_table" "inventory" {
 
 /* externalized route */
 resource "aws_route" "inventory2igw" {
-  route_table_id            = aws_route_table.inventory.id
-  destination_cidr_block    = "0.0.0.0/0"
-    gateway_id = aws_internet_gateway.inventory.id
+  route_table_id         = aws_route_table.inventory.id
+  destination_cidr_block = "0.0.0.0/0"
+  gateway_id             = aws_internet_gateway.inventory.id
 }
 
 /* attach the route table to the subnet */
@@ -124,6 +124,15 @@ resource "aws_network_acl" "inventory" {
     rule_no    = 100
     from_port  = 22
     to_port    = 22
+    cidr_block = "0.0.0.0/0"
+    protocol   = "tcp"
+    action     = "allow"
+  }
+
+  ingress { /* added in for LB */
+    rule_no    = 105
+    from_port  = 443
+    to_port    = 443
     cidr_block = "0.0.0.0/0"
     protocol   = "tcp"
     action     = "allow"

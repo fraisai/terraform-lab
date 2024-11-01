@@ -34,6 +34,17 @@ variable "subnet_cidr" {
   default = "10.100.1.0/24"
 }
 
+variable "subnet2_cidr" {
+  type    = string
+  default = "10.100.2.0/24"
+}
+
+
+variable "cidr_any" {
+  type    = string
+  default = "0.0.0.0/0"
+}
+
 variable "inventory_server_private_ip" {
   type    = string
   default = "10.100.1.10"
